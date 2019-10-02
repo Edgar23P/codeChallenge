@@ -1,22 +1,27 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 5%;
+    background-color: white;
+    height: 100vh; /* Magic here */
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  align-items: center;
 
-.App-link {
-  color: #09d3ac;
+}
+.image{
+  width: 200px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.title{
+  text-align:center
+}
+.descripcion{
+  text-align: center;
 }

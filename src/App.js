@@ -1,25 +1,24 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Slider from "./Slider";
 
-function App() {
+function App(props) {
+  const [args,setArgs] = useState(props);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+      <div className="card">
+        <div className="title">
+            <h4>{args.titulo}</h4>
+        </div>
+        <Slider items={args.items}/>
+        <div>
+          <p className="descripcion">
+            {args.descripcion}
+          </p>
+        </div>
+      </div>
+      </div>
   );
 }
 
