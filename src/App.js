@@ -8,11 +8,12 @@ function App(props) {
   return (
       <div>
       <div className="card">
+        
+        <Slider items={args.items}/>
+        <div>
         <div className="title">
             <h4>{args.titulo}</h4>
         </div>
-        <Slider items={args.items}/>
-        <div>
           <p className="descripcion">
             {args.descripcion}
           </p>

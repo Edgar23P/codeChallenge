@@ -1,12 +1,13 @@
 .card{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin-top: 50px;
     transition: 0.3s;
-    border-radius: 5px; /* 5px rounded corners */
+    border-radius: 5px; 
     margin-left: 70px;
     margin-right: 70px;
     margin-bottom: 5%;
     background-color: white;
-    height: 100vh; /* Magic here */
+    height: 100vh;
   justify-content: center;
   align-items: center;
 
