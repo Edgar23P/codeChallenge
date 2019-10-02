@@ -60,15 +60,15 @@ export const Control = styled.div`
   cursor: pointer;
 `;
 
-export const ControlLeft = styled(Control)`
+export const Izquierda = styled(Control)`
   left: 0;
+  width: 60px;
+  height: 20px;
+  background: #ffffff;
 `;
-export const ControlRight = styled(Control)`
+export const Derecha = styled(Control)`
   right: 0;
-`;
-
-export const BigElement = styled.div`
-  min-height: 1000px;
-  background: #61dafb;
-  width: 30px;
+  width: 60px;
+  height: 20px;
+  background: #ffffff;
 `;

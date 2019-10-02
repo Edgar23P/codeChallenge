@@ -5,18 +5,15 @@ import {
   CorredorImagenes,
   Navigation,
   NavigationItem,
-  ControlLeft,
-  ControlRight,
-  BigElement
+  Izquierda,
+  Derecha,
 } from "./styles";
 function useWindowWidth() {
   const [width, setWidth] = useState(window.innerWidth);
-
+  /* Efecto usado para adecuar el tamaño del card */
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
-
     window.addEventListener("resize", handleResize);
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -25,6 +22,7 @@ function useWindowWidth() {
 }
 const Slider = (props) => {
   const width = useWindowWidth();
+  /* Utilizo Redux para almacenar el Indice de la imagen */
   const [state, dispatch] = useReducer(reducer, {
     currentIndex: 0,
     items: props.items
@@ -71,16 +69,16 @@ const Slider = (props) => {
         </Navigation>
         <div>
           {state.currentIndex > 0 ? (
-            <ControlLeft onClick={() => dispatch({ type: "PREV" })}>
-              prev
-            </ControlLeft>
+            <Izquierda onClick={() => dispatch({ type: "PREV" })}>
+              Anterior
+            </Izquierda>
           ) : (
             ""
           )}
           {state.currentIndex < state.items.length - 1 ? (
-            <ControlRight onClick={() => dispatch({ type: "NEXT" })}>
-              next
-            </ControlRight>
+            <Derecha onClick={() => dispatch({ type: "NEXT" })}>
+              Siguiente
+            </Derecha>
           ) : (
             ""
           )}
@@ -117,7 +115,7 @@ function reducer(state, action) {
 const Slide = ({ item, width }) => {
   return (
     <Item width={width} style={{alignItems:'center',justifyContent:'center',alignContent:'center'}}>
-      <img src={item.img} style={{width:1024}}></img>
+      <img src={item.img} style={{width:1400}}></img>
     </Item>
   );
 };
